@@ -3,42 +3,54 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Guitar Residence — музична школа в Києві</title>
+
 <meta name="description"
-content="Guitar Residence — індивідуальні заняття з гітари, вокалу та фортепіано в центрі Києва. Навчайся грати музику, яку любиш.">
+content="Guitar Residence — індивідуальні заняття з гітари, вокалу та фортепіано в Києві та онлайн. Навчайся грати улюблену музику з першого заняття.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
+
 /* =========================================================
    RESET
 ========================================================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 html {
     scroll-behavior: smooth;
 }
+
 body {
     background: #0b0c0b;
     color: #f5f2eb;
     font-family: "Manrope", sans-serif;
     line-height: 1.6;
 }
+
 a {
     color: inherit;
     text-decoration: none;
 }
+
 button,
 input,
 select {
     font-family: inherit;
 }
+
 /* =========================================================
    VARIABLES
 ========================================================= */
+
 :root {
     --black: #0b0c0b;
     --black-2: #121311;
@@ -50,16 +62,20 @@ select {
     --border: rgba(255,255,255,.10);
     --container: 1180px;
 }
+
 /* =========================================================
    GLOBAL
 ========================================================= */
+
 .container {
     width: min(var(--container), calc(100% - 40px));
     margin: 0 auto;
 }
+
 .section {
     padding: 110px 0;
 }
+
 .label {
     color: var(--gold-light);
     font-size: 12px;
@@ -68,27 +84,33 @@ select {
     text-transform: uppercase;
     margin-bottom: 18px;
 }
+
 .section-title {
     font-size: clamp(36px, 5vw, 62px);
     line-height: 1.05;
     letter-spacing: -2px;
 }
+
 .section-subtitle {
     max-width: 620px;
     color: var(--muted);
     font-size: 17px;
     margin-top: 20px;
 }
+
 .center {
     text-align: center;
 }
+
 .center .section-subtitle {
     margin-left: auto;
     margin-right: auto;
 }
+
 /* =========================================================
    BUTTONS
 ========================================================= */
+
 .btn {
     display: inline-flex;
     justify-content: center;
@@ -101,25 +123,29 @@ select {
     font-weight: 800;
     font-size: 14px;
     cursor: pointer;
-    transition:
-        .2s ease;
+    transition: .2s ease;
 }
+
 .btn:hover {
     background: var(--gold-light);
     transform: translateY(-2px);
 }
+
 .btn-outline {
     background: transparent;
     color: var(--white);
     border-color: rgba(255,255,255,.25);
 }
+
 .btn-outline:hover {
     background: rgba(255,255,255,.06);
     border-color: var(--gold);
 }
+
 /* =========================================================
    HEADER
 ========================================================= */
+
 header {
     position: fixed;
     top: 0;
@@ -130,12 +156,14 @@ header {
     backdrop-filter: blur(14px);
     border-bottom: 1px solid rgba(255,255,255,.07);
 }
+
 .navbar {
     height: 76px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .logo {
     display: flex;
     align-items: center;
@@ -144,10 +172,12 @@ header {
     letter-spacing: 1px;
     line-height: .9;
 }
+
 .logo-icon {
     color: var(--gold);
     font-size: 31px;
 }
+
 .logo small {
     display: block;
     color: var(--gold);
@@ -155,23 +185,28 @@ header {
     letter-spacing: 3px;
     margin-top: 4px;
 }
+
 .nav {
     display: flex;
     align-items: center;
     gap: 27px;
 }
+
 .nav a {
     color: #d8d5cd;
     font-size: 13px;
     transition: .2s;
 }
+
 .nav a:hover {
     color: var(--gold-light);
 }
+
 .header-phone {
     font-size: 13px;
     font-weight: 700;
 }
+
 .menu {
     display: none;
     background: none;
@@ -180,15 +215,18 @@ header {
     font-size: 26px;
     cursor: pointer;
 }
+
 /* =========================================================
    HERO
 ========================================================= */
+
 .hero {
     min-height: 820px;
     display: flex;
     align-items: center;
     position: relative;
     overflow: hidden;
+
     background:
         linear-gradient(
             90deg,
@@ -200,59 +238,71 @@ header {
         url("https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=2000&q=85")
         center / cover;
 }
+
 .hero-content {
     position: relative;
     z-index: 2;
     padding-top: 70px;
-    max-width: 780px;
+    max-width: 800px;
 }
+
 .hero h1 {
     font-size: clamp(48px, 7vw, 86px);
     line-height: .98;
     letter-spacing: -4px;
     margin-bottom: 28px;
 }
+
 .hero h1 span {
     color: var(--gold-light);
 }
+
 .hero-description {
     max-width: 620px;
     color: #ccc9c1;
     font-size: 18px;
 }
+
 .hero-actions {
     display: flex;
     gap: 12px;
     margin-top: 34px;
 }
+
 .hero-proof {
     display: flex;
     gap: 35px;
     margin-top: 65px;
     flex-wrap: wrap;
 }
+
 .proof-item {
     padding-left: 16px;
     border-left: 1px solid var(--gold);
 }
+
 .proof-item strong {
     display: block;
     font-size: 19px;
 }
+
 .proof-item span {
     display: block;
     color: var(--muted);
     font-size: 12px;
     margin-top: 2px;
 }
+
 /* =========================================================
    SOCIAL PROOF
 ========================================================= */
+
 .proof-bar {
     border-bottom: 1px solid var(--border);
     border-top: 1px solid var(--border);
     background: var(--black-2);
 }
+
 .proof-bar-inner {
     min-height: 100px;
     display: flex;
@@ -260,23 +310,27 @@ header {
     align-items: center;
     gap: 30px;
 }
+
 .proof-bar strong {
     font-size: 20px;
 }
+
 .proof-bar span {
     color: var(--muted);
     font-size: 13px;
 }
+
 /* =========================================================
    DIRECTIONS
 ========================================================= */
+
 .direction-grid {
     display: grid;
-    grid-template-columns:
-        repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 18px;
     margin-top: 55px;
 }
+
 .direction {
     position: relative;
     min-height: 420px;
@@ -285,6 +339,7 @@ header {
     border-radius: 5px;
     background: var(--black-2);
 }
+
 .direction-image {
     position: absolute;
     inset: 0;
@@ -292,9 +347,11 @@ header {
     background-position: center;
     transition: .5s;
 }
+
 .direction:hover .direction-image {
     transform: scale(1.05);
 }
+
 .direction::after {
     content: "";
     position: absolute;
@@ -305,18 +362,22 @@ header {
             rgba(0,0,0,.90) 90%
         );
 }
+
 .guitar {
     background-image:
         url("https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=1000&q=85");
 }
+
 .vocal {
     background-image:
         url("https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1000&q=85");
 }
+
 .piano {
     background-image:
         url("https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?auto=format&fit=crop&w=1000&q=85");
 }
+
 .direction-content {
     position: absolute;
     bottom: 0;
@@ -325,75 +386,89 @@ header {
     padding: 28px;
     width: 100%;
 }
+
 .direction-number {
     color: var(--gold-light);
     font-size: 12px;
     font-weight: 800;
     letter-spacing: 2px;
 }
+
 .direction h3 {
     font-size: 31px;
     margin: 8px 0;
 }
+
 .direction p {
     color: #c5c1b8;
     font-size: 14px;
     margin-bottom: 20px;
 }
+
 .direction a {
     color: var(--gold-light);
     font-weight: 800;
     font-size: 13px;
 }
+
 /* =========================================================
    USP
 ========================================================= */
+
 .usp {
     background: var(--black-2);
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
 }
+
 .usp-grid {
     display: grid;
-    grid-template-columns:
-        repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     margin-top: 60px;
 }
+
 .usp-item {
     padding: 25px;
     border-right: 1px solid var(--border);
 }
+
 .usp-item:last-child {
     border-right: none;
 }
+
 .usp-number {
     color: var(--gold);
     font-size: 12px;
     font-weight: 800;
     letter-spacing: 2px;
 }
+
 .usp-item h3 {
     font-size: 20px;
     margin: 15px 0 8px;
 }
+
 .usp-item p {
     color: var(--muted);
     font-size: 14px;
 }
+
 /* =========================================================
    TEACHER
 ========================================================= */
+
 .teacher-layout {
     display: grid;
-    grid-template-columns:
-        1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 80px;
     align-items: center;
     margin-top: 55px;
 }
+
 .teacher-photo {
     min-height: 560px;
     border-radius: 5px;
+
     background:
         linear-gradient(
             180deg,
@@ -403,116 +478,136 @@ header {
         url("https://images.unsplash.com/photo-1516924962500-2b4b3b99ea02?auto=format&fit=crop&w=1200&q=85")
         center / cover;
 }
+
 .teacher-text h3 {
     font-size: 42px;
     line-height: 1.05;
     margin-bottom: 7px;
 }
+
 .teacher-role {
     color: var(--gold-light);
     font-weight: 700;
     margin-bottom: 25px;
 }
+
 .teacher-text p {
     color: var(--muted);
     margin-bottom: 20px;
 }
+
 .teacher-facts {
     display: grid;
-    grid-template-columns:
-        repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
     margin: 30px 0;
 }
+
 .fact {
     border: 1px solid var(--border);
     padding: 18px;
     border-radius: 4px;
 }
+
 .fact strong {
     display: block;
     color: var(--gold-light);
     font-size: 21px;
 }
+
 .fact span {
     color: var(--muted);
     font-size: 12px;
 }
+
 /* =========================================================
    STUDIO
 ========================================================= */
+
 .studio {
     background: #11120f;
 }
+
 .studio-grid {
     display: grid;
-    grid-template-columns:
-        1.4fr .8fr .8fr;
-    grid-template-rows:
-        280px 280px;
+    grid-template-columns: 1.4fr .8fr .8fr;
+    grid-template-rows: 280px 280px;
     gap: 12px;
     margin-top: 55px;
 }
+
 .studio-photo {
     background-size: cover;
     background-position: center;
     border-radius: 4px;
 }
+
 .studio-main {
     grid-row: span 2;
     background-image:
         url("https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&q=85");
 }
+
 .studio-2 {
     background-image:
         url("https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=85");
 }
+
 .studio-3 {
     background-image:
         url("https://images.unsplash.com/photo-1524650359799-842906ca1c06?auto=format&fit=crop&w=800&q=85");
 }
+
 .studio-4 {
     background-image:
         url("https://images.unsplash.com/photo-1598387993281-cecf8b71a8f8?auto=format&fit=crop&w=800&q=85");
 }
+
 .studio-5 {
     background-image:
         url("https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&w=800&q=85");
 }
+
 /* =========================================================
    REVIEWS
 ========================================================= */
+
 .review-grid {
     display: grid;
-    grid-template-columns:
-        repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 18px;
     margin-top: 55px;
 }
+
 .review {
     padding: 30px;
     background: #f1eee7;
     color: #24231f;
     border-radius: 5px;
 }
+
 .stars {
     color: #a9791c;
     letter-spacing: 2px;
     margin-bottom: 18px;
 }
+
 .review p {
     font-size: 15px;
     line-height: 1.7;
 }
+
 .review-author {
     display: block;
     color: #77736a;
     font-size: 12px;
     margin-top: 24px;
 }
+
 /* =========================================================
    PRICE
 ========================================================= */
+
 .price-section {
     background:
         radial-gradient(
@@ -522,6 +617,7 @@ header {
         ),
         var(--black-2);
 }
+
 .price-card {
     max-width: 820px;
     margin: 55px auto 0;
@@ -530,6 +626,7 @@ header {
     background: rgba(255,255,255,.025);
     border-radius: 5px;
 }
+
 .price-row {
     display: flex;
     justify-content: space-between;
@@ -537,32 +634,40 @@ header {
     padding: 24px 0;
     border-bottom: 1px solid var(--border);
 }
+
 .price-row:last-of-type {
     border-bottom: none;
 }
+
 .price-name strong {
     display: block;
     font-size: 18px;
 }
+
 .price-name span {
     color: var(--muted);
     font-size: 12px;
 }
+
 .price-value {
     color: var(--gold-light);
     font-size: 27px;
     font-weight: 800;
 }
+
 .price-card .btn {
     width: 100%;
     margin-top: 25px;
 }
+
 /* =========================================================
    CTA
 ========================================================= */
+
 .cta {
     position: relative;
     overflow: hidden;
+
     background:
         linear-gradient(
             90deg,
@@ -572,137 +677,174 @@ header {
         url("https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=1800&q=85")
         center / cover;
 }
+
 .cta-inner {
     min-height: 560px;
     display: flex;
     align-items: center;
 }
+
 .cta-content {
     max-width: 680px;
 }
+
 .cta h2 {
     font-size: clamp(42px, 6vw, 70px);
     line-height: 1;
     letter-spacing: -3px;
 }
+
 .cta p {
     color: #c6c2b9;
     font-size: 17px;
     margin: 25px 0 30px;
 }
+
 .cta-note {
     color: var(--muted);
     font-size: 11px;
     margin-top: 14px;
 }
+
 /* =========================================================
    CONTACT
 ========================================================= */
+
 .contact-grid {
     display: grid;
-    grid-template-columns:
-        1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 70px;
 }
+
 .contact-list {
     margin-top: 35px;
 }
+
 .contact-item {
     padding: 18px 0;
     border-bottom: 1px solid var(--border);
 }
+
 .contact-item span {
     display: block;
     color: var(--muted);
     font-size: 12px;
 }
+
 .contact-item strong {
     display: block;
     font-size: 17px;
     margin-top: 3px;
 }
+
 .contact-item a {
     color: var(--gold-light);
 }
+
 .map {
     padding: 0;
     overflow: hidden;
+    border-radius: 5px;
+    min-height: 420px;
 }
 
 .map iframe {
+    display: block;
     width: 100%;
     height: 100%;
     min-height: 420px;
     border: 0;
 }
+
 /* =========================================================
    FOOTER
 ========================================================= */
+
 footer {
     padding: 30px 0;
     border-top: 1px solid var(--border);
     color: #68675f;
     font-size: 12px;
 }
+
 .footer-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 /* =========================================================
    MOBILE
 ========================================================= */
+
 @media(max-width: 950px) {
+
     .nav,
     .header-phone {
         display: none;
     }
+
     .menu {
         display: block;
     }
+
     .direction-grid {
         grid-template-columns: 1fr;
     }
+
     .direction {
         min-height: 360px;
     }
+
     .usp-grid {
         grid-template-columns: 1fr 1fr;
     }
+
     .usp-item:nth-child(2) {
         border-right: none;
     }
+
     .teacher-layout {
         grid-template-columns: 1fr;
         gap: 40px;
     }
+
     .teacher-photo {
         min-height: 450px;
     }
+
     .studio-grid {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 250px 250px 250px;
     }
+
     .studio-main {
         grid-column: span 2;
         grid-row: span 1;
     }
+
     .review-grid {
         grid-template-columns: 1fr;
     }
+
     .contact-grid {
         grid-template-columns: 1fr;
     }
 }
+
 @media(max-width: 600px) {
+
     .container {
         width: min(100% - 30px, var(--container));
     }
+
     .section {
         padding: 75px 0;
     }
+
     .hero {
         min-height: 760px;
+
         background:
             linear-gradient(
                 90deg,
@@ -712,98 +854,120 @@ footer {
             url("https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=1200&q=85")
             center / cover;
     }
+
     .hero h1 {
         font-size: 48px;
         letter-spacing: -2.5px;
     }
+
     .hero-description {
         font-size: 16px;
     }
+
     .hero-actions {
         flex-direction: column;
     }
+
     .hero-actions .btn {
         width: 100%;
     }
+
     .hero-proof {
         gap: 18px;
         margin-top: 45px;
     }
+
     .proof-bar-inner {
         padding: 25px 0;
         flex-direction: column;
         align-items: flex-start;
     }
+
     .usp-grid {
         grid-template-columns: 1fr;
     }
+
     .usp-item {
         border-right: none;
         border-bottom: 1px solid var(--border);
     }
+
     .teacher-photo {
         min-height: 380px;
     }
+
     .teacher-text h3 {
         font-size: 34px;
     }
+
     .teacher-facts {
         grid-template-columns: 1fr 1fr;
     }
+
     .studio-grid {
         grid-template-columns: 1fr;
-        grid-template-rows:
-            repeat(5, 220px);
+        grid-template-rows: repeat(5, 220px);
     }
+
     .studio-main {
         grid-column: span 1;
     }
+
     .price-card {
         padding: 20px;
     }
+
     .price-row {
         align-items: flex-start;
         gap: 15px;
     }
+
     .price-value {
         font-size: 21px;
         white-space: nowrap;
     }
+
     .cta-inner {
         min-height: 600px;
     }
+
     .cta h2 {
         font-size: 45px;
         letter-spacing: -2px;
     }
+
     .contact-grid {
         gap: 35px;
     }
-    .map {
-    padding: 0;
-    overflow: hidden;
-}
 
-.map iframe {
-    width: 100%;
-    height: 100%;
-    min-height: 420px;
-    border: 0;
-}
+    .map {
+        min-height: 420px;
     }
+
+    .map iframe {
+        min-height: 420px;
+    }
+
     .footer-inner {
         flex-direction: column;
         gap: 10px;
         align-items: flex-start;
     }
+}
+
 </style>
 </head>
+
 <body>
+
 <!-- ======================================================
      HEADER
 ====================================================== -->
+
 <header>
+
 <div class="container navbar">
+
 <a href="#home" class="logo">
 <span class="logo-icon">♫</span>
 <span>
@@ -811,6 +975,7 @@ GUITAR
 <small>RESIDENCE</small>
 </span>
 </a>
+
 <nav class="nav">
 <a href="#directions">Напрями</a>
 <a href="#about">Про нас</a>
@@ -819,553 +984,849 @@ GUITAR
 <a href="#prices">Ціни</a>
 <a href="#contacts">Контакти</a>
 </nav>
+
 <a class="header-phone"
 href="tel:+380995671384">
 +38 (099) 567 13 84
 </a>
+
 <a href="#booking" class="btn">
 Записатися
 </a>
+
 <button class="menu"
 onclick="toggleMenu()">
 ☰
 </button>
+
 </div>
 </header>
+
+
 <!-- ======================================================
      HERO
 ====================================================== -->
+
 <section class="hero" id="home">
+
 <div class="container">
+
 <div class="hero-content">
+
 <div class="label">
 МУЗИЧНА ШКОЛА · КИЇВ
 </div>
+
 <h1>
-Навчайся грати
-<span>музику,</span>
-яку любиш.
+Навчу тебе грати
+<span>улюблені пісні</span>
+навіть з нуля
 </h1>
+
 <p class="hero-description">
-Індивідуальні заняття з гітари,
-вокалу та фортепіано.
-Без зайвої теорії.
-З фокусом на музику,
-яку ти реально хочеш грати.
+Індивідуальні заняття з гітари, вокалу та фортепіано
+в Києві та онлайн. Починаємо з музики, яку ти хочеш грати,
+а не з місяців нудної теорії.
 </p>
+
 <div class="hero-actions">
-<a href="#booking"
-class="btn">
+
+<a href="#booking" class="btn">
 Записатися на пробне
 </a>
-<a href="#directions"
-class="btn btn-outline">
+
+<a href="#directions" class="btn btn-outline">
 Обрати напрям →
 </a>
+
 </div>
+
 <div class="hero-proof">
+
 <div class="proof-item">
 <strong>8+ років</strong>
 <span>
 досвіду викладання
 </span>
 </div>
+
 <div class="proof-item">
 <strong>1 на 1</strong>
 <span>
 індивідуальні заняття
 </span>
 </div>
+
 <div class="proof-item">
-<strong>Київ</strong>
+<strong>Київ + онлайн</strong>
 <span>
-центр міста
+зручний формат навчання
 </span>
 </div>
+
+</div>
+
 </div>
 </div>
-</div>
+
 </section>
+
+
 <!-- ======================================================
      PROOF BAR
 ====================================================== -->
+
 <section class="proof-bar">
+
 <div class="container proof-bar-inner">
+
 <div>
+
 <strong>
-Твоя музика — твій прогрес.
+Ти вже знаєш, що хочеш зіграти.
 </strong>
+
 <span>
-Починаємо з того, що тобі цікаво.
+Ми покажемо, як до цього дійти.
 </span>
+
 </div>
+
 <div>
+
 <span>
 Гітара · Вокал · Фортепіано
 </span>
+
 </div>
+
 </div>
+
 </section>
+
+
 <!-- ======================================================
      DIRECTIONS
 ====================================================== -->
+
 <section class="section" id="directions">
+
 <div class="container">
+
 <div class="label">
 НАПРЯМИ
 </div>
+
 <h2 class="section-title">
-Обери свою музику.
+Чого ти хочеш навчитися?
 </h2>
+
 <p class="section-subtitle">
-Не потрібно знати ноти,
-не потрібно мати досвід.
-Ми почнемо з того рівня,
-на якому ти зараз.
+Обирай інструмент — програму підлаштуємо під твій рівень,
+цілі та музику, яку ти любиш.
 </p>
+
 <div class="direction-grid">
+
 <!-- GUITAR -->
+
 <article class="direction">
+
 <div class="direction-image guitar"></div>
+
 <div class="direction-content">
+
 <div class="direction-number">
 01 · ГІТАРА
 </div>
+
 <h3>
 Гітара
 </h3>
+
 <p>
 Акустична · електрогітара · класична
 </p>
+
 <a href="#booking">
 Почати навчання →
 </a>
+
 </div>
+
 </article>
+
+
 <!-- VOCAL -->
+
 <article class="direction">
+
 <div class="direction-image vocal"></div>
+
 <div class="direction-content">
+
 <div class="direction-number">
 02 · ВОКАЛ
 </div>
+
 <h3>
 Вокал
 </h3>
+
 <p>
 Голос · дихання · інтонація · сцена
 </p>
+
 <a href="#booking">
 Почати навчання →
 </a>
+
 </div>
+
 </article>
+
+
 <!-- PIANO -->
+
 <article class="direction">
+
 <div class="direction-image piano"></div>
+
 <div class="direction-content">
+
 <div class="direction-number">
 03 · ФОРТЕПІАНО
 </div>
+
 <h3>
 Фортепіано
 </h3>
+
 <p>
 Класика · сучасна музика · практика
 </p>
+
 <a href="#booking">
 Почати навчання →
 </a>
+
 </div>
+
 </article>
+
 </div>
 </div>
+
 </section>
+
+
 <!-- ======================================================
      USP
 ====================================================== -->
+
 <section class="section usp" id="about">
+
 <div class="container">
+
 <div class="center">
+
 <div class="label">
 ЧОМУ GUITAR RESIDENCE
 </div>
+
 <h2 class="section-title">
-Не просто урок.
+Ти прийдеш за результатом,
+а не за домашкою.
 </h2>
+
 <p class="section-subtitle">
-Ти приходиш не «вчити музику».
-Ти приходиш навчитися нею користуватися.
+Навчання будується навколо твоєї мети:
+навчитися грати, співати або розуміти музику
+на практиці.
 </p>
+
 </div>
+
+
 <div class="usp-grid">
+
 <div class="usp-item">
+
 <div class="usp-number">
 01
 </div>
+
 <h3>
 Під тебе
 </h3>
+
 <p>
 Програма залежить від твоєї мети,
 рівня та музики, яку ти любиш.
 </p>
+
 </div>
+
+
 <div class="usp-item">
+
 <div class="usp-number">
 02
 </div>
+
 <h3>
 Практика
 </h3>
+
 <p>
-Граємо з першого заняття.
-Теорія потрібна лише там,
-де вона допомагає грати.
+Працюємо з музикою з самого початку.
+Теорія з'являється там, де вона реально
+допомагає тобі грати.
 </p>
+
 </div>
+
+
 <div class="usp-item">
+
 <div class="usp-number">
 03
 </div>
+
 <h3>
 Живі музиканти
 </h3>
+
 <p>
 Викладачі не просто пояснюють.
 Вони самі грають, виступають
 і розуміють реальну музику.
 </p>
+
 </div>
+
+
 <div class="usp-item">
+
 <div class="usp-number">
 04
 </div>
+
 <h3>
 Комфорт
 </h3>
+
 <p>
-Затишна студія в центрі Києва,
-де можна спокійно вчитися
-і займатися музикою.
+Затишна студія в Києві,
+де можна спокійно займатися
+і концентруватися на музиці.
 </p>
+
 </div>
+
 </div>
+
 </div>
+
 </section>
+
+
 <!-- ======================================================
      TEACHER
 ====================================================== -->
+
 <section class="section" id="teacher">
+
 <div class="container">
+
 <div class="teacher-layout">
+
 <div class="teacher-photo"></div>
+
+
 <div class="teacher-text">
+
 <div class="label">
 ХТО БУДЕ ТЕБЕ ВЧИТИ
 </div>
+
 <h3>
 Роман
 </h3>
+
 <div class="teacher-role">
 Гітара · Засновник Guitar Residence
 </div>
+
 <p>
 8+ років викладацького досвіду,
 студент НМАУ та концертуючий гітарист.
 </p>
+
 <p>
 Моя задача — не просто показати,
 як поставити пальці на струни.
 Я хочу, щоб ти якомога швидше
 почав грати музику самостійно.
 </p>
+
+
 <div class="teacher-facts">
+
 <div class="fact">
 <strong>8+</strong>
 <span>
 років викладання
 </span>
 </div>
+
 <div class="fact">
 <strong>1 → 1</strong>
 <span>
 індивідуальний формат
 </span>
 </div>
+
 <div class="fact">
 <strong>100%</strong>
 <span>
 програма під учня
 </span>
 </div>
+
 <div class="fact">
 <strong>LIVE</strong>
 <span>
 концертний досвід
 </span>
 </div>
+
 </div>
+
+
 <a href="#booking" class="btn">
 Познайомитися на пробному
 </a>
+
 </div>
+
 </div>
+
 </div>
+
 </section>
+
+
 <!-- ======================================================
      STUDIO
 ====================================================== -->
+
 <section class="section studio" id="studio">
+
 <div class="container">
+
 <div class="label">
 ПРОСТІР
 </div>
+
 <h2 class="section-title">
-Подивись, де проходитимуть заняття.
+Місце, куди хочеться приходити.
 </h2>
+
 <p class="section-subtitle">
-Не стокове фото.
-Реальний простір Guitar Residence.
+Реальний простір Guitar Residence у Києві —
+не стокове фото з музичною школою.
 </p>
+
+
 <div class="studio-grid">
+
 <div class="studio-photo studio-main"></div>
+
 <div class="studio-photo studio-2"></div>
+
 <div class="studio-photo studio-3"></div>
+
 <div class="studio-photo studio-4"></div>
+
 <div class="studio-photo studio-5"></div>
+
 </div>
+
 </div>
+
 </section>
+
+
 <!-- ======================================================
      REVIEWS
 ====================================================== -->
+
 <section class="section">
+
 <div class="container">
+
 <div class="center">
+
 <div class="label">
 ВІДГУКИ
 </div>
+
 <h2 class="section-title">
-Учні говорять краще за рекламу.
+Вони теж колись не вміли грати.
 </h2>
+
 <p class="section-subtitle">
-Тут обов'язково замінимо демонстраційні
-відгуки на реальні скриншоти або відео
-твоїх учнів.
+Замінимо демонстраційні картки на реальні
+відгуки, скриншоти та відео учнів.
 </p>
+
 </div>
+
+
 <div class="review-grid">
+
 <div class="review">
+
 <div class="stars">
 ★★★★★
 </div>
+
 <p>
-«Тут має бути реальний відгук учня.
-Короткий, конкретний і бажано
-з результатом.»
+«Тут буде реальний відгук учня:
+що він умів до занять і що змінилося після.»
 </p>
+
 <span class="review-author">
 — Ім'я · напрям
 </span>
+
 </div>
+
+
 <div class="review">
+
 <div class="stars">
 ★★★★★
 </div>
+
 <p>
-«Найкраще працюватимуть відгуки,
-де людина розповідає,
-що змінилося після занять.»
+«Найсильніший відгук — не “все супер”,
+а конкретний результат, якого людина досягла.»
 </p>
+
 <span class="review-author">
 — Ім'я · напрям
 </span>
+
 </div>
+
+
 <div class="review">
+
 <div class="stars">
 ★★★★★
 </div>
+
 <p>
-«Не пиши тут “все супер”.
-Покажи конкретний результат
-і живу реакцію учня.»
+«Тут покажемо живу реакцію учня,
+його прогрес або конкретну пісню,
+яку він навчився грати.»
 </p>
+
 <span class="review-author">
 — Ім'я · напрям
 </span>
+
 </div>
+
 </div>
+
 </div>
+
 </section>
+
+
 <!-- ======================================================
      PRICE
 ====================================================== -->
+
 <section class="section price-section" id="prices">
+
 <div class="container">
+
 <div class="center">
+
 <div class="label">
 СТАРТ
 </div>
+
 <h2 class="section-title">
-Скільки коштує почати?
+Почати простіше, ніж здається.
 </h2>
+
 <p class="section-subtitle">
-Без довгих контрактів.
 Спочатку знайомимося на пробному занятті.
+Без необхідності одразу купувати абонемент.
 </p>
+
 </div>
+
+
 <div class="price-card">
+
 <div class="price-row">
+
 <div class="price-name">
+
 <strong>
 Пробне заняття
 </strong>
+
 <span>
 індивідуально · 1 заняття
 </span>
+
 </div>
+
 <div class="price-value">
 300 грн
 </div>
+
 </div>
+
+
 <div class="price-row">
+
 <div class="price-name">
+
 <strong>
 Звичайне заняття
 </strong>
+
 <span>
 індивідуальний формат
 </span>
+
 </div>
+
 <div class="price-value">
 від 600 грн
 </div>
+
 </div>
-<a href="#booking"
-class="btn">
+
+
+<a href="#booking" class="btn">
 Записатися на пробне заняття
 </a>
+
 </div>
+
 </div>
+
 </section>
+
+
 <!-- ======================================================
      CTA
 ====================================================== -->
+
 <section class="cta" id="booking">
+
 <div class="container cta-inner">
+
 <div class="cta-content">
+
 <div class="label">
 ПЕРШИЙ КРОК
 </div>
+
 <h2>
-Не чекай,
-поки «буде час».
+Ти вже знаєш,
+яку пісню хочеш зіграти.
 </h2>
+
 <p>
 Напиши нам.
 Розкажи, що хочеш навчитися грати —
-ми підберемо напрямок,
-викладача та зручний час.
+ми підберемо напрям, викладача
+та зручний час першого заняття.
 </p>
+
 <a href="https://t.me/guitar_residence"
 target="_blank"
 class="btn">
 Написати в Telegram →
 </a>
+
 <div class="cta-note">
 Або зателефонуй:
-+38 (099) 567 13 84
-</div>
-</div>
-</div>
-</section>
-<!-- ======================================================
-     CONTACTS
-====================================================== -->
-<section class="section" id="contacts">
-<div class="container">
-<div class="contact-grid">
-<div>
-<div class="label">
-КОНТАКТИ
-</div>
-<h2 class="section-title">
-Guitar Residence
-</h2>
-<div class="contact-list">
-<div class="contact-item">
-<span>
-АДРЕС
-</span>
-<strong>
-Київ · Хрещатик 6
-</strong>
-</div>
-<div class="contact-item">
-<span>
-ТЕЛЕФОН
-</span>
-<strong>
 <a href="tel:+380995671384">
 +38 (099) 567 13 84
 </a>
-</strong>
 </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     CONTACTS
+====================================================== -->
+
+<section class="section" id="contacts">
+
+<div class="container">
+
+<div class="contact-grid">
+
+<div>
+
+<div class="label">
+КОНТАКТИ
+</div>
+
+<h2 class="section-title">
+Guitar Residence
+</h2>
+
+
+<div class="contact-list">
+
 <div class="contact-item">
+
+<span>
+АДРЕС
+</span>
+
+<strong>
+Київ · Хрещатик 6
+</strong>
+
+</div>
+
+
+<div class="contact-item">
+
+<span>
+ТЕЛЕФОН
+</span>
+
+<strong>
+
+<a href="tel:+380995671384">
++38 (099) 567 13 84
+</a>
+
+</strong>
+
+</div>
+
+
+<div class="contact-item">
+
 <span>
 INSTAGRAM
 </span>
+
 <strong>
+
 <a href="https://instagram.com/"
 target="_blank">
 @guitar_residence
 </a>
+
 </strong>
+
 </div>
+
+
 <div class="contact-item">
+
 <span>
 TELEGRAM
 </span>
+
 <strong>
+
 <a href="https://t.me/guitar_residence"
 target="_blank">
 Написати нам →
 </a>
+
 </strong>
+
 </div>
+
 </div>
+
 </div>
+
+
 <div class="map">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1270.205065534695!2d30.524125398394787!3d50.452087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cfc1f3ed6ae1%3A0x613a1ce0f2e348c!2sGuitar%20Residence!5e0!3m2!1sru!2sua!4v1786442255638!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-<br><br>
+
+<iframe
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1270.205065534695!2d30.524125398394787!3d50.452087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cfc1f3ed6ae1%3A0x613a1ce0f2e348c!2sGuitar%20Residence!5e0!3m2!1sru!2sua!4v1786442255638!5m2!1sru!2sua"
+width="600"
+height="450"
+style="border:0;"
+allowfullscreen=""
+loading="lazy"
+referrerpolicy="strict-origin-when-cross-origin">
+</iframe>
+
 </div>
+
 </div>
+
 </div>
+
 </section>
+
+
 <!-- ======================================================
      FOOTER
 ====================================================== -->
+
 <footer>
+
 <div class="container footer-inner">
+
 <div>
 © 2026 Guitar Residence
 </div>
+
 <div>
 Гітара · Вокал · Фортепіано
 </div>
+
 </div>
+
 </footer>
+
+
 <!-- ======================================================
      JAVASCRIPT
 ====================================================== -->
+
 <script>
+
 function toggleMenu() {
+
     const nav = document.querySelector(".nav");
+
     if (nav.style.display === "flex") {
+
         nav.style.display = "none";
+
     } else {
+
         nav.style.display = "flex";
+
         nav.style.position = "absolute";
         nav.style.top = "76px";
         nav.style.left = "0";
@@ -1377,41 +1838,68 @@ function toggleMenu() {
             "1px solid rgba(255,255,255,.10)";
     }
 }
+
+
 /* Закриття мобільного меню */
+
 document.querySelectorAll(".nav a").forEach(link => {
+
     link.addEventListener("click", () => {
+
         if (window.innerWidth <= 950) {
+
             document.querySelector(".nav").style.display =
                 "none";
+
         }
+
     });
+
 });
+
+
 /* Плавна поява блоків */
+
 const observer =
     new IntersectionObserver(
         entries => {
+
             entries.forEach(entry => {
+
                 if (entry.isIntersecting) {
+
                     entry.target.style.opacity = "1";
+
                     entry.target.style.transform =
                         "translateY(0)";
                 }
+
             });
+
         },
         {
             threshold: .12
         }
     );
+
+
 document.querySelectorAll(
     ".direction, .usp-item, .review, .teacher-layout"
 ).forEach(element => {
+
     element.style.opacity = "0";
+
     element.style.transform =
         "translateY(25px)";
+
     element.style.transition =
         "opacity .7s ease, transform .7s ease";
+
     observer.observe(element);
+
 });
+
 </script>
+
 </body>
 </html>
