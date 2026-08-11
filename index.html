@@ -521,6 +521,102 @@ header {
 }
 
 /* =========================================================
+   TEACHERS CAROUSEL
+========================================================= */
+
+.teachers-carousel {
+    display: flex;
+    gap: 14px;
+    margin-top: 35px;
+    overflow-x: auto;
+    padding: 5px 5px 15px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: var(--gold) transparent;
+}
+
+.teachers-carousel::-webkit-scrollbar {
+    height: 5px;
+}
+
+.teachers-carousel::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.teachers-carousel::-webkit-scrollbar-thumb {
+    background: var(--gold);
+    border-radius: 10px;
+}
+
+.teacher-mini {
+    flex: 0 0 280px;
+    min-height: 105px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+    background: var(--black-2);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    scroll-snap-align: start;
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.teacher-mini:hover {
+    border-color: rgba(216,162,61,.55);
+    transform: translateY(-2px);
+}
+
+.teacher-mini.active {
+    border-color: var(--gold);
+    background: rgba(216,162,61,.06);
+}
+
+.teacher-mini-photo {
+    width: 80px;
+    height: 80px;
+    flex: 0 0 80px;
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center;
+}
+
+.teacher-mini-info strong {
+    display: block;
+    font-size: 17px;
+    margin-bottom: 4px;
+}
+
+.teacher-mini-info span {
+    display: block;
+    color: var(--gold-light);
+    font-size: 12px;
+}
+
+/* Фото викладачів */
+
+.roman {
+    background-image:
+        url("ТУТ_ПОСТАВИ_ФОТО_РОМАНА");
+}
+
+.kateryna {
+    background-image:
+        url("ТУТ_ПОСТАВИ_ФОТО_КАТЕРИНИ");
+}
+
+.guitar-teacher {
+    background-image:
+        url("ТУТ_ПОСТАВИ_ФОТО_ГІТАРИСТА");
+}
+
+.piano-teacher {
+    background-image:
+        url("ТУТ_ПОСТАВИ_ФОТО_ПІАНІСТА");
+}
+
+/* =========================================================
    STUDIO
 ========================================================= */
 
@@ -903,6 +999,15 @@ footer {
     .teacher-facts {
         grid-template-columns: 1fr 1fr;
     }
+
+    .teacher-mini {
+    flex-basis: 255px;
+}
+
+.teachers-carousel {
+    margin-right: -15px;
+    padding-right: 15px;
+}
 
     .studio-grid {
         grid-template-columns: 1fr;
@@ -1405,8 +1510,46 @@ onclick="toggleMenu()">
 
 
 <a href="#booking" class="btn">
-Познайомитися на пробному
+    Познайомитися на пробному
 </a>
+</div>
+</div>
+
+<div class="teachers-carousel">
+
+    <div class="teacher-mini active">
+        <div class="teacher-mini-photo roman"></div>
+        <div class="teacher-mini-info">
+            <strong>Роман</strong>
+            <span>Гітара · Засновник</span>
+        </div>
+    </div>
+
+    <div class="teacher-mini">
+        <div class="teacher-mini-photo kateryna"></div>
+        <div class="teacher-mini-info">
+            <strong>Катерина</strong>
+            <span>Вокал</span>
+        </div>
+    </div>
+
+    <div class="teacher-mini">
+        <div class="teacher-mini-photo guitar-teacher"></div>
+        <div class="teacher-mini-info">
+            <strong>Анастасія</strong>
+            <span>Гітара</span>
+        </div>
+    </div>
+
+    <div class="teacher-mini">
+        <div class="teacher-mini-photo piano-teacher"></div>
+        <div class="teacher-mini-info">
+            <strong>Владислав</strong>
+            <span>Фортепіано</span>
+        </div>
+    </div>
+
+</div>
 
 </div>
 
