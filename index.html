@@ -2058,7 +2058,8 @@ const teacherFacts = [
    CHANGE TEACHER
 ========================================================= */
 function changeTeacher(
-    teacherId
+    teacherId,
+    shouldScroll = true
 ) {
     const teacher =
         teachers[teacherId];
@@ -2157,15 +2158,13 @@ function changeTeacher(
         /* ---------------------------------------------
            Mobile auto scroll
         --------------------------------------------- */
-        activeCard.scrollIntoView({
-            behavior:
-                "smooth",
-            block:
-                "nearest",
-            inline:
-                "center"
-        });
-    }
+        if (shouldScroll) {
+    activeCard.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "center"
+    });
+}
 }
 /* =========================================================
    TEACHER CARD CLICK
@@ -2187,9 +2186,7 @@ document
 /* =========================================================
    INITIAL TEACHER
 ========================================================= */
-changeTeacher(
-    "roman"
-);
+changeTeacher("roman", false);
 /* =========================================================
    MOBILE MENU
 ========================================================= */
