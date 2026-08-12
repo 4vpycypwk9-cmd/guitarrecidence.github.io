@@ -315,6 +315,9 @@ header {
             rgba(0,0,0,.90) 90%
         );
 }
+.direction {
+    cursor: pointer;
+}
 .guitar {
     background-image:
         url(
@@ -1189,80 +1192,147 @@ class="btn btn-outline">
 <section
 class="section"
 id="directions">
+
 <div class="container">
-<div class="label">
-НАПРЯМИ
+
+    <div class="label">
+        НАПРЯМИ
+    </div>
+
+    <h2 class="section-title">
+        Чого ти хочеш навчитися?
+    </h2>
+
+    <p class="section-subtitle">
+        Обирай інструмент —
+        програму підлаштуємо
+        під твій рівень,
+        цілі та музику,
+        яку ти любиш.
+    </p>
+
+    <div class="direction-grid">
+
+        <!-- =================================================
+             ГІТАРА
+        ================================================== -->
+        <article
+            class="direction"
+            onclick="
+                changeTeacher('roman');
+                document.getElementById('teacher')
+                    .scrollIntoView({behavior:'smooth'});
+            "
+        >
+
+            <div
+                class="direction-image guitar">
+            </div>
+
+            <div class="direction-content">
+
+                <div class="direction-number">
+                    01 · ГІТАРА
+                </div>
+
+                <h3>
+                    Гітара
+                </h3>
+
+                <p>
+                    Акустична · електрогітара · класична
+                </p>
+
+                <a href="#teacher">
+                    Обрати викладача →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- =================================================
+             ВОКАЛ
+        ================================================== -->
+        <article
+            class="direction"
+            onclick="
+                changeTeacher('kateryna');
+                document.getElementById('teacher')
+                    .scrollIntoView({behavior:'smooth'});
+            "
+        >
+
+            <div
+                class="direction-image vocal">
+            </div>
+
+            <div class="direction-content">
+
+                <div class="direction-number">
+                    02 · ВОКАЛ
+                </div>
+
+                <h3>
+                    Вокал
+                </h3>
+
+                <p>
+                    Голос · дихання · інтонація · сцена
+                </p>
+
+                <a href="#teacher">
+                    Обрати викладача →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- =================================================
+             ФОРТЕПІАНО
+        ================================================== -->
+        <article
+            class="direction"
+            onclick="
+                changeTeacher('vladyslav');
+                document.getElementById('teacher')
+                    .scrollIntoView({behavior:'smooth'});
+            "
+        >
+
+            <div
+                class="direction-image piano">
+            </div>
+
+            <div class="direction-content">
+
+                <div class="direction-number">
+                    03 · ФОРТЕПІАНО
+                </div>
+
+                <h3>
+                    Фортепіано
+                </h3>
+
+                <p>
+                    Класика · сучасна музика · практика
+                </p>
+
+                <a href="#teacher">
+                    Обрати викладача →
+                </a>
+
+            </div>
+
+        </article>
+
+    </div>
+
 </div>
-<h2 class="section-title">
-Чого ти хочеш навчитися?
-</h2>
-<p class="section-subtitle">
-Обирай інструмент —
-програму підлаштуємо
-під твій рівень,
-цілі та музику,
-яку ти любиш.
-</p>
-<div class="direction-grid">
-<article class="direction">
-<div
-class="direction-image guitar">
-</div>
-<div class="direction-content">
-<div class="direction-number">
-01 · ГІТАРА
-</div>
-<h3>
-Гітара
-</h3>
-<p>
-Акустична · електрогітара · класична
-</p>
-<a href="#booking">
-Почати навчання →
-</a>
-</div>
-</article>
-<article class="direction">
-<div
-class="direction-image vocal">
-</div>
-<div class="direction-content">
-<div class="direction-number">
-02 · ВОКАЛ
-</div>
-<h3>
-Вокал
-</h3>
-<p>
-Голос · дихання · інтонація · сцена
-</p>
-<a href="#booking">
-Почати навчання →
-</a>
-</div>
-</article>
-<article class="direction">
-<div
-class="direction-image piano">
-</div>
-<div class="direction-content">
-<div class="direction-number">
-03 · ФОРТЕПІАНО
-</div>
-<h3>
-Фортепіано
-</h3>
-<p>
-Класика · сучасна музика · практика
-</p>
-<a href="#booking">
-Почати навчання →
-</a>
-</div>
-</article>
-</div>
-</div>
+
 </section>
 <!-- ======================================================
      USP
