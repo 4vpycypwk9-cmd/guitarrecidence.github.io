@@ -1,6 +1,35 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+
+<script>
+    if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+    }
+
+    // При відкритті сторінки прибираємо старий hash
+    if (window.location.hash) {
+        history.replaceState(
+            null,
+            "",
+            window.location.pathname + window.location.search
+        );
+    }
+
+    window.addEventListener("load", function () {
+        window.scrollTo(0, 0);
+    });
+
+    window.addEventListener("pageshow", function () {
+        window.scrollTo(0, 0);
+    });
+</script>
+
+<meta charset="UTF-8">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Guitar Residence — музична школа в Києві</title>
