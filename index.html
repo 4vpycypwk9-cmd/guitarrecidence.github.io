@@ -1,35 +1,6 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-<!DOCTYPE html>
-<html lang="uk">
-
-<head>
-
-<script>
-    if ("scrollRestoration" in history) {
-        history.scrollRestoration = "manual";
-    }
-
-    // При відкритті сторінки прибираємо старий hash
-    if (window.location.hash) {
-        history.replaceState(
-            null,
-            "",
-            window.location.pathname + window.location.search
-        );
-    }
-
-    window.addEventListener("load", function () {
-        window.scrollTo(0, 0);
-    });
-
-    window.addEventListener("pageshow", function () {
-        window.scrollTo(0, 0);
-    });
-</script>
-
-<meta charset="UTF-8">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Guitar Residence — музична школа в Києві</title>
@@ -322,6 +293,9 @@ header {
     background:
         var(--black-2);
 }
+    .direction {
+    cursor: pointer;
+}
 .direction-image {
     position: absolute;
     inset: 0;
@@ -343,9 +317,6 @@ header {
             transparent 25%,
             rgba(0,0,0,.90) 90%
         );
-}
-.direction {
-    cursor: pointer;
 }
 .guitar {
     background-image:
@@ -1218,6 +1189,9 @@ class="btn btn-outline">
 <!-- ======================================================
      DIRECTIONS
 ====================================================== -->
+<!-- ======================================================
+     DIRECTIONS
+====================================================== -->
 <section
 class="section"
 id="directions">
@@ -2087,8 +2061,7 @@ const teacherFacts = [
    CHANGE TEACHER
 ========================================================= */
 function changeTeacher(
-    teacherId,
-    shouldScroll = true
+    teacherId
 ) {
     const teacher =
         teachers[teacherId];
@@ -2187,13 +2160,15 @@ function changeTeacher(
         /* ---------------------------------------------
            Mobile auto scroll
         --------------------------------------------- */
-        if (shouldScroll) {
-    activeCard.scrollIntoView({
-        behavior: "smooth",
-        block: "nearest",
-        inline: "center"
-    });
-}
+        activeCard.scrollIntoView({
+            behavior:
+                "smooth",
+            block:
+                "nearest",
+            inline:
+                "center"
+        });
+    }
 }
 /* =========================================================
    TEACHER CARD CLICK
@@ -2215,7 +2190,9 @@ document
 /* =========================================================
    INITIAL TEACHER
 ========================================================= */
-changeTeacher("roman", false);
+changeTeacher(
+    "roman"
+);
 /* =========================================================
    MOBILE MENU
 ========================================================= */
