@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Guitar Residence — музична школа в Києві</title>
 <meta name="description"
-content="Guitar Residence — камерна музична школа в центрі Києва. Індивідуальні заняття з гітари, вокалу та фортепіано. Пробне заняття — 300 грн.">
+content="Guitar Residence — камерна музична школа в центрі Києва. Індивідуальні заняття з гітари, вокалу та фортепіано. Урок 60 хв — від 600 грн у абонементі.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
@@ -697,7 +697,7 @@ header {
         var(--black-2);
 }
 .price-card {
-    max-width: 820px;
+    max-width: 1180px;
     margin:
         55px auto 0;
     padding: 38px;
@@ -736,6 +736,59 @@ header {
     width: 100%;
     margin-top: 25px;
 }
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 14px;
+}
+.pricing-plan {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 350px;
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    background: rgba(255,255,255,.025);
+}
+.pricing-plan.featured {
+    border-color: rgba(216,162,61,.7);
+    background: rgba(216,162,61,.07);
+}
+.plan-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 6px 9px;
+    border-radius: 3px;
+    background: var(--gold);
+    color: #171208;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+.plan-count {
+    color: var(--gold-light);
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    line-height: 1;
+}
+.plan-title { margin: 10px 0 24px; font-size: 20px; }
+.plan-list {
+    display: grid;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    color: var(--muted);
+    font-size: 13px;
+}
+.plan-list li::before { content: "✓"; margin-right: 9px; color: var(--gold-light); }
+.plan-price { margin-top: auto; padding-top: 28px; }
+.plan-price strong { color: var(--gold-light); font-size: 35px; letter-spacing: -1px; }
+.plan-price span { display: block; margin-top: 3px; color: var(--muted); font-size: 13px; }
 /* =========================================================
    CTA
 ========================================================= */
@@ -1083,6 +1136,8 @@ footer {
         padding:
             20px;
     }
+    .pricing-grid { grid-template-columns: 1fr; }
+    .pricing-plan { min-height: auto; }
     .price-row {
         align-items:
             flex-start;
@@ -1150,7 +1205,7 @@ RESIDENCE
 Напрями
 </a>
 <a href="#first-lesson">
-Пробне заняття
+Перше заняття
 </a>
 <a href="#about">
 Про нас
@@ -1194,7 +1249,7 @@ id="home">
 <div class="container">
 <div class="hero-content">
 <div class="label">
-КАМЕРНА МУЗИЧНА ШКОЛА · КИЇВ
+МУЗИЧНА ШКОЛА СТУДІЯ · КИЇВ
 </div>
 <h1>
 Навчимо грати
@@ -1209,14 +1264,13 @@ id="home">
 хочеш грати, а не з місяців нудної теорії.
 </p>
 <div class="hero-offer">
-<strong>Пробне заняття — 300 грн</strong>
-<span>· познайомимось, визначимо ціль і почнемо грати</span>
+<strong>Перше заняття всього 300 грн</strong>
 </div>
 <div class="hero-actions">
 <a
 href="#first-lesson"
 class="btn">
-Дізнатися про пробне
+Обрати формат занять
 </a>
 <a
 href="#directions"
@@ -1227,10 +1281,10 @@ class="btn btn-outline">
 <div class="hero-proof">
 <div class="proof-item">
 <strong>
-300 грн
+60 хв
 </strong>
 <span>
-пробне заняття
+індивідуальний урок
 </span>
 </div>
 <div class="proof-item">
@@ -1279,10 +1333,10 @@ class="btn btn-outline">
 <section class="section trial-section" id="first-lesson">
 <div class="container trial-layout">
 <div>
-<div class="label">ПЕРШЕ ЗАНЯТТЯ</div>
+<div class="label">ПЕРШИЙ КРОК</div>
 <h2 class="section-title">Не просто знайомство. Твій перший крок у музиці.</h2>
-<p class="section-subtitle">За 300 грн ти зрозумієш, який напрям тобі підходить, познайомишся з викладачем і почнеш працювати над музикою, яку хочеш виконувати.</p>
-<div class="trial-note"><span>1 на 1</span><div>Після уроку ти знатимеш, що робити далі — без зобов’язання одразу купувати абонемент.</div></div>
+<p class="section-subtitle">На першому занятті ти познайомишся з викладачем, визначиш напрям і почнеш працювати над музикою, яку хочеш виконувати.</p>
+<div class="trial-note"><span>60 хв</span><div>Індивідуальний урок 1 на 1: спочатку зрозуміємо твою ціль, а тоді складемо план наступних занять.</div></div>
 </div>
 <div>
 <div class="trial-grid">
@@ -1290,7 +1344,7 @@ class="btn btn-outline">
 <article class="trial-step"><b>02 · ПРАКТИКА</b><h3>Починаємо грати</h3><p>Викладач дає першу зрозумілу вправу або мелодію — без перевантаження теорією.</p></article>
 <article class="trial-step"><b>03 · ПЛАН</b><h3>Розумієш наступний крок</h3><p>Отримуєш персональну рекомендацію: напрям, викладач і темп занять під твою мету.</p></article>
 </div>
-<div class="hero-actions"><a href="#booking" class="btn">Записатися на пробне заняття →</a></div>
+<div class="hero-actions"><a href="#booking" class="btn">Записатися на заняття →</a></div>
 </div>
 </div>
 </section>
@@ -1755,49 +1809,57 @@ id="prices">
 <div class="container">
 <div class="center">
 <div class="label">
-СТАРТ
+ВАРТІСТЬ ЗАНЯТЬ
 </div>
 <h2 class="section-title">
-Почати простіше, ніж здається.
+Обери свій темп навчання.
 </h2>
 <p class="section-subtitle">
-Почни з пробного уроку: визначимо твою ціль,
-познайомимо з викладачем і складемо
-зрозумілий план навчання.
+Усі заняття індивідуальні та тривають 60 хвилин.
+Чим регулярніше займаєшся — тим вигідніша
+вартість одного уроку.
 </p>
 </div>
 <div class="price-card">
 <div class="price-row">
 <div class="price-name">
 <strong>
-Пробне заняття
+Разове заняття
 </strong>
 <span>
-індивідуально · знайомство + перша практика
+60 хв · індивідуальний формат
 </span>
 </div>
 <div class="price-value">
-300 грн
+800 грн
 </div>
 </div>
-<div class="price-row">
-<div class="price-name">
-<strong>
-Звичайне заняття
-</strong>
-<span>
-індивідуально · регулярний формат
-</span>
+<div class="pricing-grid">
+<article class="pricing-plan">
+<div class="plan-count">4</div>
+<h3 class="plan-title">заняття на місяць</h3>
+<ul class="plan-list"><li>4 уроки по 60 хв</li><li>1 раз на тиждень</li><li>Підходить для старту та знайомства з гітарою</li></ul>
+<div class="plan-price"><strong>2 800 грн</strong><span>700 грн / урок</span></div>
+</article>
+<article class="pricing-plan featured">
+<div class="plan-badge">ПОПУЛЯРНИЙ</div>
+<div class="plan-count">8</div>
+<h3 class="plan-title">занять на місяць</h3>
+<ul class="plan-list"><li>8 уроків по 60 хв</li><li>2 рази на тиждень</li><li>Оптимальний формат для стабільного прогресу</li></ul>
+<div class="plan-price"><strong>5 200 грн</strong><span>650 грн / урок</span></div>
+</article>
+<article class="pricing-plan">
+<div class="plan-count">12</div>
+<h3 class="plan-title">занять на місяць</h3>
+<ul class="plan-list"><li>12 уроків по 60 хв</li><li>3 рази на тиждень</li><li>Максимальний результат за короткий час</li></ul>
+<div class="plan-price"><strong>7 200 грн</strong><span>600 грн / урок</span></div>
+</article>
 </div>
-<div class="price-value">
-від 600 грн
-</div>
-</div>
-<p class="price-helper">Плануєш займатися регулярно? Напиши нам — підкажемо зручний формат і розклад.</p>
+<p class="price-helper">Абонементи розраховані на один місяць. Допоможемо обрати формат під твою ціль і графік.</p>
 <a
 href="#booking"
 class="btn">
-Записатися на пробне заняття
+Записатися на заняття
 </a>
 </div>
 </div>
@@ -1812,7 +1874,7 @@ class="btn">
 <h2 class="section-title">Перед першим уроком.</h2>
 </div>
 <div class="faq-list">
-<article class="faq-item"><h3>Чи можна прийти без досвіду?</h3><p>Так. Пробне заняття якраз і створене, щоб спокійно почати з нуля та зрозуміти свій темп.</p></article>
+<article class="faq-item"><h3>Чи можна прийти без досвіду?</h3><p>Так. Перше заняття допоможе спокійно почати з нуля, познайомитися з викладачем і зрозуміти свій темп.</p></article>
 <article class="faq-item"><h3>Чи потрібен свій інструмент?</h3><p>Якщо інструмент уже є — бери його із собою. Якщо ні, напиши нам перед записом: підкажемо, як найкраще підготуватися до уроку.</p></article>
 <article class="faq-item"><h3>Як обрати напрям і викладача?</h3><p>Розкажи, що хочеш виконувати й чого очікуєш від занять. Ми запропонуємо напрям і викладача, які найкраще відповідають твоїй цілі.</p></article>
 </div>
@@ -1836,7 +1898,7 @@ id="booking">
 <p>
 Напиши, який напрям тобі цікавий, чи був досвід
 і коли тобі зручно займатися. Ми підберемо викладача
-та домовимося про пробне заняття за 300 грн.
+та домовимося про перше індивідуальне заняття.
 </p>
 <a
 href="https://t.me/guitar_residence"
