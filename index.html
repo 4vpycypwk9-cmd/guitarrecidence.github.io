@@ -55,9 +55,9 @@
         }
 
         [data-season="autumn"] {
-            --gold: #d4a03d;
-            --gold-light: #e8b650;
-            --gold-dark: #a87d28;
+            --gold: #c48a28;
+            --gold-light: #d4a03d;
+            --gold-dark: #a07020;
             --gold-glow: rgba(212, 160, 61, 0.35);
             --accent-1: #b45309;
             --accent-2: #dc2626;
@@ -845,9 +845,16 @@
 </head>
 <body>
 
+<canvas id="seasonalCanvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;"></canvas>
+
 <!-- ======================================================
      PROMO BAR (STICKY)
+     SEASONAL EFFECTS CANVAS
 ====================================================== -->
+<canvas id="seasonalCanvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;"></canvas>
+
+<!-- ======================================================
+     PROMO BAR (STICKY)
 <div class="promo-bar" id="promoBar">
     <strong>Акція до 30 вересня:</strong>
     <span>Пробне заняття <b>200 грн</b> замість 300 грн</span>
@@ -1234,7 +1241,6 @@
 
                 <article class="pricing-plan featured">
                     <div class="plan-badge">ПОПУЛЯРНИЙ</div>
-                    <div class="plan-badge-sale">АКЦІЯ −400 грн</div>
                     <div class="plan-count">8</div>
                     <h3 class="plan-title">занять на місяць</h3>
                     <ul class="plan-list">
