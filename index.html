@@ -19,6 +19,7 @@
             --gold-dark: #b8851f;
             --gold-glow: rgba(216, 162, 61, 0.35);
             --container: 1180px;
+            --promo-height: 54px;
 
             --bg-main: #0b0c0b;
             --bg-secondary: #121311;
@@ -145,7 +146,7 @@
         }
 
         /* =========================================================
-           PROMO BAR (PREMIUM DARK GOLD)
+           PROMO BAR (PREMIUM DARK GOLD) - ВИПРАВЛЕНО
         ========================================================= */
         .promo-bar {
             position: fixed;
@@ -157,7 +158,7 @@
             border-bottom: 1px solid var(--gold);
             color: var(--text-main);
             text-align: center;
-            padding: 10px 20px;
+            padding: 12px 20px;
             font-size: 14px;
             font-weight: 700;
             display: flex;
@@ -165,6 +166,8 @@
             align-items: center;
             gap: 15px;
             flex-wrap: wrap;
+            min-height: var(--promo-height);
+            height: auto;
         }
         .promo-bar strong { color: var(--gold); font-size: 15px; }
         .promo-bar b { color: var(--gold-light); }
@@ -195,11 +198,11 @@
         .promo-close:hover { opacity: 1; color: var(--gold); }
 
         /* =========================================================
-           HEADER & NAV
+           HEADER & NAV - ВИПРАВЛЕНО
         ========================================================= */
         header {
             position: fixed;
-            top: 44px;
+            top: var(--promo-height);
             left: 0;
             width: 100%;
             z-index: 100;
@@ -257,6 +260,7 @@
                 var(--hero-grad-3) 100%
             ), url("https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=2000&q=85") center / cover;
             transition: background 0.3s ease;
+            margin-top: calc(var(--promo-height) + 76px);
         }
         .hero-content {
             position: relative;
@@ -758,6 +762,7 @@
            MOBILE & TABLET
         ========================================================= */
         @media(max-width: 950px) {
+            :root { --promo-height: 48px; }
             .nav {
                 position: fixed; top: 0; right: -100%; width: 100%; height: 100vh;
                 background: var(--header-bg); backdrop-filter: blur(15px);
@@ -792,9 +797,10 @@
         }
 
         @media(max-width: 600px) {
+            :root { --promo-height: 50px; }
             .container { width: min(100% - 30px, var(--container)); }
             .section { padding: 50px 0; }
-            .hero { min-height: auto; padding: 140px 0 60px; }
+            .hero { min-height: auto; padding: 140px 0 60px; margin-top: calc(var(--promo-height) + 76px); }
             .hero h1 { font-size: 40px; letter-spacing: -2px; }
             .hero-description { font-size: 16px; }
             .hero-actions { flex-direction: column; }
@@ -834,9 +840,9 @@
             body { padding-bottom: 75px; }
             .floating-contacts { bottom: 80px; right: 10px; }
             .floating-btn { width: 48px; height: 48px; font-size: 20px; }
-            .promo-bar { font-size: 12px; padding: 8px 10px; top: 0; }
+            .promo-bar { font-size: 12px; padding: 10px; top: 0; }
             .promo-bar strong { font-size: 13px; }
-            header { top: 38px; }
+            header { top: var(--promo-height); }
             .hero-content { padding-top: 60px; }
             .exit-popup { padding: 28px 20px; }
             .exit-popup h3 { font-size: 22px; }
@@ -845,16 +851,11 @@
 </head>
 <body>
 
-<canvas id="seasonalCanvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;"></canvas>
-
 <!-- ======================================================
-     PROMO BAR (STICKY)
-     SEASONAL EFFECTS CANVAS
+     SEASONAL EFFECTS CANVAS & PROMO BAR
 ====================================================== -->
 <canvas id="seasonalCanvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;"></canvas>
 
-<!-- ======================================================
-     PROMO BAR (STICKY)
 <div class="promo-bar" id="promoBar">
     <strong>Акція до 30 вересня:</strong>
     <span>Пробне заняття <b>200 грн</b> замість 300 грн</span>
@@ -1072,7 +1073,7 @@
             <div class="usp-item">
                 <div class="usp-number">03</div>
                 <h3>Живі музиканти</h3>
-                <p>Викладачі не просто пояснюють. Вони самі грають, виступають і розуміють реальну музику.</p>
+                <p>Викладачи не просто пояснюють. Вони самі грають, виступають і розуміють реальну музику.</p>
             </div>
             <div class="usp-item">
                 <div class="usp-number">04</div>
@@ -1220,7 +1221,7 @@
             <p class="section-subtitle">Усі заняття індивідуальні та тривають 60 хвилин. Чим регулярніше займаєшся — тим вигідніша вартість одного уроку.</p>
         </div>
 
-        <div class="sale-ends">Акційні ціни діють до 30 веесня включно</div>
+        <div class="sale-ends">Акційні ціни діють до 30 вересня включно</div>
 
         <div class="price-card">
             <div class="price-row">
